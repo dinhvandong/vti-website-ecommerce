@@ -34,6 +34,7 @@ public class AuthController {
         System.out.println("ABC");
         Optional<User> optionalUser = userRepository.findByUsername(loginRequest.getUsername());
 
+        System.out.println("Test login system");
         if(!optionalUser.isPresent()){
             return ResponseEntity.status(HttpStatus.OK).body(new
                     ResponseObject(201, "user not found",""));
